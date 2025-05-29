@@ -1,0 +1,172 @@
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+body {
+    zoom: normal;
+    /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+} 
+
+.titulo {
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+/* ------------------------- */
+/* Galería Funcional */
+/* ------------------------- */
+
+.row.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.row.galeria .col {
+    padding: 0 !important;
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+}
+
+.material-placeholder {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+/* Efecto hover mejorado */
+.material-placeholder:hover img {
+    transform: scale(1.05);
+}
+
+/* ------------------------- */
+/* Correcciones Materialbox */
+/* ------------------------- */
+
+.materialboxed.active {
+    position: fixed !important;
+    z-index: 1000 !important;
+    max-height: 90vh !important;
+    max-width: 90vw !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    cursor: zoom-out;
+    animation: zoomLento 0.5s ease forwards !important; /* Cambio clave aquí */
+}
+
+@keyframes zoomLento {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.9; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+#materialbox-overlay {
+    background: #000000 !important;
+    z-index: 999 !important;
+    transition: opacity 0.5s ease !important; /* Duración sincronizada */
+}
+
+.materialbox-caption {
+    bottom: 30px !important;
+    right: 0 !important;
+    width: 40% !important;
+    padding: 15px !important;
+    margin: auto !important;
+    background: #000000 !important;
+    box-shadow: 5px 5px #b60808 !important;
+    font-size: 20px !important;
+    color: #fff !important;
+    line-height: 28px !important;
+    border-radius: 8px !important;
+}
+
+/* ------------------------- */
+/* Responsive Design */
+/* ------------------------- */
+
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .row.galeria .col {
+        flex-grow: 1;
+        min-width: 250px;
+    }
+
+    .material-placeholder {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .materialbox-caption {
+        width: 80% !important;
+        font-size: 16px !important;
+        bottom: 15px !important;
+    }
+    .galeria img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+
+    .row.galeria .col {
+        width: 100% !important;
+    }
+
+    .materialboxed.active {
+        max-width: 95vw !important;
+        max-height: 60vh !important;
+    }
+}
+
+.row.galeria {
+    gap: 0;
+    margin: 0 -5px;
+}
+
+.row.galeria .col {
+    padding: 5px !important;
+}
+
+.material-placeholder {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(245, 245, 245, 0);
+}
+
+.titulo  {
+    color: #fff;
+}

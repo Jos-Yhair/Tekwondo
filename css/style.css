@@ -1,0 +1,159 @@
+/* DISEÑO RESPONSIVO LOGO TITULO */
+.header-img2 {
+    width: 100%;
+    background-color: #000000; 
+    padding: 1rem;
+}
+
+
+
+.left-h {
+    width: 30%;
+    padding: 0;
+    background-color: #000000; 
+}
+
+.left-h img {
+    width: 40%;
+    height: auto;
+    object-fit: fill;
+    margin: 0 auto;
+    display: block;
+}
+
+.right-h {
+    width: 80%;
+    padding: 0;
+    background-color: #000000; 
+}
+
+.right-h img {
+    width: 90%;
+    height: auto;
+    object-fit: fill;
+    margin: 0 auto;
+    display: block;
+}
+
+/*LO DE GRIS*/
+
+
+article {
+    background-color: #000000;
+    max-width: 1100px;/*AJUSTAR EL TEXTO*/
+    width: 100%;
+    margin: 16px auto;
+    padding: 16px;
+    text-align: justify;
+
+}
+
+body {
+    background-color: #000000;  
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: #740505;  
+    padding: 10px;
+    text-align: center;
+    color:rgb(213, 208, 208);;
+
+    width: 100%;
+}
+
+font{
+    text-align: center;
+    color:rgb(213, 208, 208);; /*COLOR DE LETRA*/
+}
+
+/*FORMULARIO*/
+
+form{
+background-color:#740505;;  
+    padding: 20px;
+    margin: 10px auto;/*CENTRARLO*/
+    max-width: 400px; /*LO LARGO*/
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0);
+    color:rgb(213, 208, 208); /*COLOR DE LETRA*/
+}
+
+input[type="text"],
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(213, 208, 208);/*COLOR DE LETRA*/
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="button"]{
+    background-color: rgb(244, 244, 244);/*COLOR DEL BUTTON*/
+    color: rgb(0, 0, 0);/*COLOR DE LETRA*/
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+input[type="button"]:hover{
+    background-color: rgb(254, 0, 0);
+}
+
+
+article p {
+ 
+    text-align: justify; /*TEXTO JUSTIFICADO*/
+
+}
+
+th,  td {
+    color: rgb(213, 208, 208)!important;/*COLOR DE LETRA*/
+}
+
+/* ----------------- RESPONSIVO ----------------- */
+
+/* Ajustes para pantallas pequeñas como celulares */
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .menu-card {
+        width: 100%; /* Las tarjetas ocupan más ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/*
+Este bloque @media detecta cuando la pantalla mide menos de 700px
+y cambia el diseño de las tarjetas de horizontal a vertical, 
+para que se vean apiladas una abajo de otra en celulares y tablets.
+*/
+
+.modal-footer, .container my-5 {
+  background-color: #000000; /* color de fondo rosa claro, cámbialo a tu gusto */
+  color: #ffffff; /* color de texto oscuro para buen contraste */
+  border-top: none; /* opcional: elimina línea superior */
+  display: flex;
+  justify-content: space-between; /* separa texto y botón */
+  align-items: center;
+}
+
+.mi-boton-cerrar {
+  background-color: #690d0d; /* naranja */
+  color: #928b8c;
+  border: none;
+}
+
+.dropdown-menu, .dropdown-item{
+background-color: #740505;
+color: rgb(201, 199, 199);
+
+}
+
